@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Stylesheet.css' %}">
+    <title>Meme Engine</title>
+</head>
+<body>
+    <nav>
+        <div id='header'>
+            <a href="{% url 'homeView' %}"><img src="{% static 'images/logo2.png' %}" width=100px alt=""></a>
+            <div class='searchBar'>
+            <form method=POST action='{% url "searchResult" %}'>
+                {% csrf_token %}
+            <input type="text" placeholder="Meme Search Engine" name='search'>
+            <button>Search</button>
+        </form>
+        </div>
+            <a href="{% url 'uploadView' %}"><img src="{% static 'images/addButton3.png' %}" alt="" width=90px></a>
+        </div>
+    </nav>
+                {% block content %}
+
+                {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

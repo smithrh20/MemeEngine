@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<div id='content'>
+    <div id='imageBorder'>
+        <h1>{{ meme.name }}</h1>
+        <img src="{{ meme.imageURL }}" alt="" height="800px">
+
+    </div>
+    </div>
+
+{% endblock %}

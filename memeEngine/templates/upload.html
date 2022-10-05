@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+    <div id='content'>
+        <div id="uploadForm">
+            <h1>Add To The Engine</h1>
+                <form method="POST" enctype='multipart/form-data'>
+                    <table>
+                    {% csrf_token %}
+                    {{ form.as_table }}
+                    </table>
+                    <button type="submit">Upload It</button>
+                </form>
+                <br>
+        </div>
+    </div>
+
+{% endblock %}
